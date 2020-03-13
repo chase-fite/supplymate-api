@@ -1,0 +1,23 @@
+[
+    {
+        "model": "supplymateapi.status",
+        "pk": 1,
+        "fields": {
+            "name": "Approved"
+        }
+    },
+    {
+        "model": "supplymateapi.status",
+        "pk": 2,
+        "fields": {
+            "name": "Pending"
+        }
+    },
+    {
+        "model": "supplymateapi.status",
+        "pk": 3,
+        "fields": {
+            "name": "Complete"
+        }
+    }
+]
