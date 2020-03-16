@@ -1,0 +1,22 @@
+[
+    {
+        "model": "supplymateapi.address",
+        "pk": 1,
+        "fields": {
+            "street": "651 Storage Drive",
+            "city": "Nashville",
+            "state": "TN",
+            "zip_code": "37216"
+        }
+    },
+    {
+        "model": "supplymateapi.address",
+        "pk": 2,
+        "fields": {
+            "street": "4872 Quarry Lane",
+            "city": "Norcross",
+            "state": "GA",
+            "zip_code": "30071"
+        }
+    }
+]

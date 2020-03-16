@@ -1,0 +1,18 @@
+[
+    {
+        "model": "supplymateapi.supply_request_item",
+        "pk": 1,
+        "fields": {
+            "supply_request_id": 1,
+            "item_id": 1 
+        }
+    },
+    {
+        "model": "supplymateapi.supply_request_item",
+        "pk": 2,
+        "fields": {
+            "supply_request_id": 1,
+            "item_id": 2 
+        }
+    }
+]
