@@ -4,35 +4,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 from django.views.decorators.csrf import csrf_exempt
-from supplymate.supplymateapi.models import Employee
-
-
-@csrf_exempt
-def login_user(request):
-    '''Handles the authentication of a user
-    Method arguments:s
-      request -- The full HTTP request object
-    '''
-
-    req_body = json.loads(request.body.decode())
-
-    if request.method == 'POST':
-
-        username = req_body['username']
-        password = req_body['password']
-        authenticated_user = authenticate(username=username, password=password)
-
-        # If authentication was successful, respond with their token
-        if authenticated_user is not None:
-            token = Token.objects.get(user=authenticated_user)
-            data = json.dumps({"valid": True, "token": token.key})
-            return HttpResponse(data, content_type='application/json')
-
-        else:
-            # Bad login details were provided. So we can't log the user in
-            data = json.dumps({"valid": False})
-            return HttpResponse(data, content_type='application/json')
-
+from supplymateapi.models import Employee
 
 @csrf_exempt
 def register_user(request):
@@ -47,15 +19,15 @@ def register_user(request):
     # Create a new user by invoking the `create_user` helper method
     # on Django's built-in User model
     new_user = User.objects.create_user(
-        username=req_body['username'],
-        email=req_body['email'],
-        password=req_body['password'],
         first_name=req_body['first_name'],
-        last_name=req_body['last_name']
+        last_name=req_body['last_name'],
+        email=req_body['email'],
+        username=req_body['username'],
+        password=req_body['password'],
     )
 
     Employee.objects.create(
-        is_active=True,
+        role_id=1,
         user=new_user
     )
 
