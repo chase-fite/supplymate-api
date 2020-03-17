@@ -27,7 +27,7 @@ def register_user(request):
     )
 
     Employee.objects.create(
-        role_id=1,
+        role_id=req_body['role_id'],
         user=new_user
     )
 

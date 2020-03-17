@@ -1,20 +1,20 @@
 [
     {
-        "model": "supplymateapi.item_type",
+        "model": "supplymateapi.itemtype",
         "pk": 1,
         "fields": {
             "name": "Oil"
         }
     },
     {
-        "model": "supplymateapi.item_type",
+        "model": "supplymateapi.itemtype",
         "pk": 2,
         "fields": {
             "name": "Coolant"
         }
     },
     {
-        "model": "supplymateapi.item_type",
+        "model": "supplymateapi.itemtype",
         "pk": 3,
         "fields": {
             "name": "Drill Hammer/Parts"
