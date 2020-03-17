@@ -20,7 +20,6 @@ class ItemSerializer(serializers.HyperlinkedModelSerializer):
             lookup_field='id'
         )
         fields = ('id', 'url', 'name', 'description', 'serial_number', 'stock', 'quantity', 'item_type_id', 'address_id', 'storage_location', 'price')
-        depth = 2
 
 class Items(ViewSet):
     """Items for SupplyMate"""
