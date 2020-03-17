@@ -1,9 +1,9 @@
 [
     {
-        "model": "supplymateapi.supply_request",
+        "model": "supplymateapi.supplyrequest",
         "pk": 1,
         "fields": {
-            "employee_id": 1,
+            "employee_id": 6,
             "address_id": 1,
             "delivery_date_time": "2020-03-20 16:00:00",
             "status_id": 2

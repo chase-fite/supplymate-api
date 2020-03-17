@@ -9,7 +9,7 @@
             "stock": 27,
             "quantity": 22,
             "item_type_id": 1,
-            "addres_id": 1,
+            "address_id": 1,
             "storage_location": "Aisle 5, Shelf 1",
             "price": 225.00
         }
@@ -24,7 +24,7 @@
             "stock": 30,
             "quantity": 28,
             "item_type_id": 1,
-            "addres_id": 1,
+            "address_id": 1,
             "storage_location": "Aisle 5, Shelf 2",
             "price": 270.00
         }
@@ -39,7 +39,7 @@
             "stock": 20,
             "quantity": 10,
             "item_type_id": 2,
-            "addres_id": 1,
+            "address_id": 1,
             "storage_location": "Aisle 4, Shelf 4",
             "price": 110.00
         }
@@ -54,7 +54,7 @@
             "stock": 4,
             "quantity": 4,
             "item_type_id": 3,
-            "addres_id": 1,
+            "address_id": 1,
             "storage_location": "Aisle 1, Shelf 1",
             "price": 5600.00
         }
