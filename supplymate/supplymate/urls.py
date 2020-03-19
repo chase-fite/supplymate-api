@@ -17,10 +17,12 @@ from django.urls import include, path
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
 from supplymateapi.models import *
-from supplymateapi.views import login_user, register_user, Items
+from supplymateapi.views import login_user, register_user, Items, ItemTypes, Addresses
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'items', Items, 'item')
+router.register(r'itemtypes', ItemTypes, 'itemtype')
+router.register(r'addresses', Addresses, 'address')
 
 urlpatterns = [
     path('', include(router.urls)),

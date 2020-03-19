@@ -1,4 +1,4 @@
-"""Products for Bangazon"""
+"""Items for SupplyMate"""
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
@@ -19,7 +19,8 @@ class ItemSerializer(serializers.HyperlinkedModelSerializer):
             view_name='item',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'name', 'description', 'serial_number', 'stock', 'quantity', 'item_type_id', 'address_id', 'storage_location', 'price')
+        fields = ('id', 'url', 'name', 'description', 'serial_number', 'stock', 'quantity', 'item_type_id', 'item_type', 'address_id', 'address', 'storage_location', 'price')
+        depth = 2
 
 class Items(ViewSet):
     """Items for SupplyMate"""
