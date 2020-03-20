@@ -6,6 +6,8 @@ from rest_framework import serializers, status
 from rest_framework.decorators import action
 import sqlite3
 from supplymateapi.models import Item
+from supplymateapi.views.item_type import ItemTypeSerializer
+from supplymateapi.views.address import AddressSerializer
 
 
 class ItemSerializer(serializers.HyperlinkedModelSerializer):
@@ -13,13 +15,16 @@ class ItemSerializer(serializers.HyperlinkedModelSerializer):
     Arguments:
         serializers
     """
+    item_type = ItemTypeSerializer()
+    address = AddressSerializer()
+
     class Meta:
         model = Item
         url = serializers.HyperlinkedIdentityField(
             view_name='item',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'name', 'description', 'serial_number', 'stock', 'quantity', 'item_type_id', 'item_type', 'address_id', 'address', 'storage_location', 'price')
+        fields = ('id', 'name', 'description', 'serial_number', 'stock', 'quantity', 'item_type', 'address', 'storage_location', 'price')
         depth = 2
 
 class Items(ViewSet):

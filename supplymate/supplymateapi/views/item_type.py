@@ -19,7 +19,7 @@ class ItemTypeSerializer(serializers.HyperlinkedModelSerializer):
             view_name='itemtype',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'name')
+        fields = ('id', 'name')
 
 class ItemTypes(ViewSet):
     """Items for SupplyMate"""

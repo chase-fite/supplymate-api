@@ -19,7 +19,7 @@ class AddressSerializer(serializers.HyperlinkedModelSerializer):
             view_name='address',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'street', 'city', 'state', 'zip_code')
+        fields = ('id', 'street', 'city', 'state', 'zip_code')
 
 class Addresses(ViewSet):
     """Addresses for SupplyMate"""

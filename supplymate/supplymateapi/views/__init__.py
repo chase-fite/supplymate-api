@@ -4,3 +4,8 @@ from .item import Items
 from .item_type import ItemTypes
 from .address import Addresses
 from .role import Roles
+from .supply_request import SupplyRequests
+from .employee import Employees
+from .user import Users
+from .status import Statuses
+from .supply_request_item import SupplyRequestItems
