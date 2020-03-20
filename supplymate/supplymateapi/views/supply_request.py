@@ -6,6 +6,9 @@ from rest_framework import serializers, status
 from rest_framework.decorators import action
 import sqlite3
 from supplymateapi.models import SupplyRequest
+from supplymateapi.views.employee import EmployeeSerializer
+from supplymateapi.views.address import AddressSerializer
+from supplymateapi.views.status import StatusSerializer
 
 
 class SupplyRequestSerializer(serializers.HyperlinkedModelSerializer):
@@ -13,13 +16,17 @@ class SupplyRequestSerializer(serializers.HyperlinkedModelSerializer):
     Arguments:
         serializers
     """
+    employee = EmployeeSerializer()
+    address = AddressSerializer()
+    status = StatusSerializer()
+
     class Meta:
         model = SupplyRequest
         url = serializers.HyperlinkedIdentityField(
             view_name='supplyrequest',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'employee_id', 'address_id', 'address', 'delivery_date_time', 'status_id')
+        fields = ('id', 'employee', 'address', 'delivery_date_time', 'status')
         depth = 2
 
 class SupplyRequests(ViewSet):

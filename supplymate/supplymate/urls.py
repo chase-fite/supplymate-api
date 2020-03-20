@@ -16,8 +16,10 @@ Including another URLconf
 from django.urls import include, path
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
+from django.contrib.auth.models import User
 from supplymateapi.models import *
-from supplymateapi.views import login_user, register_user, Items, ItemTypes, Addresses, Roles, SupplyRequests
+from supplymateapi.views import login_user, register_user, Items, ItemTypes, Addresses, Roles, SupplyRequests, Employees, Users, Statuses, SupplyRequestItems
+
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'items', Items, 'item')
@@ -25,6 +27,11 @@ router.register(r'itemtypes', ItemTypes, 'itemtype')
 router.register(r'addresses', Addresses, 'address')
 router.register(r'roles', Roles, 'role')
 router.register(r'supplyrequests', SupplyRequests, 'supplyrequest')
+router.register(r'supplyrequestitems', SupplyRequestItems, 'supplyrequestitem')
+router.register(r'employees', Employees, 'employee')
+router.register(r'users', Users, 'user')
+router.register(r'statuses', Statuses, 'status')
+
 
 urlpatterns = [
     path('', include(router.urls)),
