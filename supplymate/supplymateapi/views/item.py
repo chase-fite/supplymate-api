@@ -54,8 +54,8 @@ class Items(ViewSet):
             serializer = ItemSerializer(items, many=True, context={'request': request})
             return Response(serializer.data)    
             
-        except Item.DoesNotExist:
-            pass
+        except Item.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
     def create(self, request):
         """Handle POST operations
