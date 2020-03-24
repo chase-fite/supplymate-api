@@ -17,7 +17,35 @@
         "model": "supplymateapi.itemtype",
         "pk": 3,
         "fields": {
-            "name": "Drill Hammer/Parts"
+            "name": "Hammer/Parts"
+        }
+    },
+    {
+        "model": "supplymateapi.itemtype",
+        "pk": 4,
+        "fields": {
+            "name": "Safety Equipment"
+        }
+    },
+    {
+        "model": "supplymateapi.itemtype",
+        "pk": 5,
+        "fields": {
+            "name": "Drill Parts"
+        }
+    },
+    {
+        "model": "supplymateapi.itemtype",
+        "pk": 6,
+        "fields": {
+            "name": "Administrative Items"
+        }
+    },
+    {
+        "model": "supplymateapi.itemtype",
+        "pk": 7,
+        "fields": {
+            "name": "Tools"
         }
     }
 ]

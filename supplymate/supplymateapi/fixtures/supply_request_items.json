@@ -14,5 +14,181 @@
             "supply_request_id": 1,
             "item_id": 2 
         }
-    }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 3,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 1 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 4,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 2 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 5,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 3 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 6,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 4 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 7,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 5 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 8,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 6 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 9,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 7 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 10,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 8 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 11,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 9 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 12,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 10 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 13,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 11 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 14,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 12 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 15,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 13 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 16,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 14 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 17,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 15 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 18,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 16 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 19,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 17 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 20,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 18 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 21,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 19 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 22,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 20 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 23,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 21 
+        }
+    },
+    {
+        "model": "supplymateapi.supplyrequestitem",
+        "pk": 24,
+        "fields": {
+            "supply_request_id": 2,
+            "item_id": 22 
+        }
+    }    
 ]

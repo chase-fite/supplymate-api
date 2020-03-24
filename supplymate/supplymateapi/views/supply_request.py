@@ -9,6 +9,7 @@ from supplymateapi.models import SupplyRequest
 from supplymateapi.views.employee import EmployeeSerializer
 from supplymateapi.views.address import AddressSerializer
 from supplymateapi.views.status import StatusSerializer
+from supplymateapi.views.item import ItemSerializer
 
 
 class SupplyRequestSerializer(serializers.HyperlinkedModelSerializer):
@@ -19,6 +20,7 @@ class SupplyRequestSerializer(serializers.HyperlinkedModelSerializer):
     employee = EmployeeSerializer()
     address = AddressSerializer()
     status = StatusSerializer()
+    items = ItemSerializer(many=True)
 
     class Meta:
         model = SupplyRequest
@@ -26,7 +28,7 @@ class SupplyRequestSerializer(serializers.HyperlinkedModelSerializer):
             view_name='supplyrequest',
             lookup_field='id'
         )
-        fields = ('id', 'employee', 'address', 'delivery_date_time', 'status')
+        fields = ('id', 'employee', 'address', 'delivery_date_time', 'status', 'items')
         depth = 2
 
 class SupplyRequests(ViewSet):
@@ -51,13 +53,24 @@ class SupplyRequests(ViewSet):
         Returns:
             Response -- JSON serialized list of Supply Requests
         """
-        try:
-            supply_requests = SupplyRequest.objects.all()
-            serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
-            return Response(serializer.data)    
-            
-        except SupplyRequest.DoesNotExist:
-            pass
+        status = self.request.query_params.get('status', None)
+        if(status == 'pending'):
+            try:
+                supply_requests = SupplyRequest.objects.filter(status__name=('Pending' or 'Approved'))
+                serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
+                return Response(serializer.data)    
+                
+            except SupplyRequest.DoesNotExist:
+                pass
+
+        else:
+            try:
+                supply_requests = SupplyRequest.objects.filter(status__name='Complete')
+                serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
+                return Response(serializer.data)    
+                
+            except SupplyRequest.DoesNotExist:
+                pass
 
     def create(self, request):
         """Handle POST operations

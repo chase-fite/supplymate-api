@@ -3,8 +3,8 @@
         "model": "supplymateapi.item",
         "pk": 1,
         "fields": {
-            "name": "Delo 400",
-            "description": "Delo 400 SDE SAE 15W-40",
+            "name": "Engine Oil",
+            "description": "Engine Oil, 15W-40",
             "serial_number": "232983487",
             "stock": 27,
             "quantity": 22,
@@ -18,8 +18,8 @@
         "model": "supplymateapi.item",
         "pk": 2,
         "fields": {
-            "name": "Cetus Hypersyn 46",
-            "description": "Cetus Hypersyn 46, Compressor Oil",
+            "name": "Compressor Oil",
+            "description": "Compressor Oil, 5 gal.",
             "serial_number": "897473829",
             "stock": 30,
             "quantity": 28,
@@ -33,8 +33,8 @@
         "model": "supplymateapi.item",
         "pk": 3,
         "fields": {
-            "name": "Delo ELC Antifreeze",
-            "description": "Delo® ELC Advanced Antifreeze/Coolant 50/50",
+            "name": "Antifreeze",
+            "description": "Antifreeze",
             "serial_number": "483928473",
             "stock": 20,
             "quantity": 10,
@@ -48,8 +48,8 @@
         "model": "supplymateapi.item",
         "pk": 4,
         "fields": {
-            "name": "Atlas Copco 5\" Drill Hammer",
-            "description": "Atlas Copco 5\" Drill Hammer",
+            "name": "5\" Drill Hammer",
+            "description": "5\" Drill Hammer",
             "serial_number": "938272773",
             "stock": 4,
             "quantity": 4,
@@ -58,5 +58,305 @@
             "storage_location": "Aisle 1, Shelf 1",
             "price": 5600.00
         }
-    }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 5,
+        "fields": {
+            "name": "Inner Air Filter",
+            "description": "Inner Air Filter",
+            "serial_number": "938273648",
+            "stock": 28,
+            "quantity": 1,
+            "item_type_id": 5,
+            "address_id": 1,
+            "storage_location": "Aisle 8, Shelf 1",
+            "price": 75.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 6,
+        "fields": {
+            "name": "Outer Air Filter",
+            "description": "Outer Air Filter",
+            "serial_number": "23048928",
+            "stock": 10,
+            "quantity": 6,
+            "item_type_id": 5,
+            "address_id": 1,
+            "storage_location": "Aisle 8, Shelf 2",
+            "price": 95.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 7,
+        "fields": {
+            "name": "5\" Concave Drill Bit",
+            "description": "5\" Concave Drill Bit",
+            "serial_number": "887348937",
+            "stock": 5,
+            "quantity": 5,
+            "item_type_id": 3,
+            "address_id": 1,
+            "storage_location": "Aisle 5, Shelf 4",
+            "price": 520.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 8,
+        "fields": {
+            "name": "Air Hose",
+            "description": "Air Hose",
+            "serial_number": "837738887",
+            "stock": 6,
+            "quantity": 3,
+            "item_type_id": 5,
+            "address_id": 1,
+            "storage_location": "Aisle 7, Shelf 15",
+            "price": 40.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 9,
+        "fields": {
+            "name": "Latex Gloves",
+            "description": "Latex Gloves",
+            "serial_number": "398477398",
+            "stock": 30,
+            "quantity": 29,
+            "item_type_id": 4,
+            "address_id": 1,
+            "storage_location": "Aisle 3, Shelf 10",
+            "price": 20.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 10,
+        "fields": {
+            "name": "Rock Oil 1000",
+            "description": "Rock Oil 1000",
+            "serial_number": "998373788",
+            "stock": 14,
+            "quantity": 7,
+            "item_type_id": 1,
+            "address_id": 1,
+            "storage_location": "Aisle 5, Shelf 7",
+            "price": 250.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 11,
+        "fields": {
+            "name": "Leather Gloves",
+            "description": "Leather Gloves",
+            "serial_number": "234098234",
+            "stock": 18,
+            "quantity": 16,
+            "item_type_id": 4,
+            "address_id": 1,
+            "storage_location": "Aisle 5, Shelf 14",
+            "price": 20.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 12,
+        "fields": {
+            "name": "Safety Harness",
+            "description": "Safety Harness",
+            "serial_number": "663521193",
+            "stock": 4,
+            "quantity": 2,
+            "item_type_id": 4,
+            "address_id": 1,
+            "storage_location": "Aisle 3, Shelf 7",
+            "price": 120.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 13,
+        "fields": {
+            "name": "Rotary Head",
+            "description": "Rotary Head",
+            "serial_number": "23498792",
+            "stock": 2,
+            "quantity": 2,
+            "item_type_id": 5,
+            "address_id": 1,
+            "storage_location": "Aisle 1, Shelf 4",
+            "price": 2600.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 14,
+        "fields": {
+            "name": "Ear Plugs",
+            "description": "Ear Plugs",
+            "serial_number": "230489234",
+            "stock": 28,
+            "quantity": 26,
+            "item_type_id": 4,
+            "address_id": 1,
+            "storage_location": "Aisle 2, Shelf 2",
+            "price": 5.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 15,
+        "fields": {
+            "name": "Drill Receipts",
+            "description": "Drill Receipts",
+            "serial_number": "23487928",
+            "stock": 6,
+            "quantity": 3,
+            "item_type_id": 6,
+            "address_id": 1,
+            "storage_location": "Aisle 23, Shelf 10",
+            "price": 15.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 16,
+        "fields": {
+            "name": "Intake Fan",
+            "description": "Intake Fan",
+            "serial_number": "239487234",
+            "stock": 4,
+            "quantity": 3,
+            "item_type_id": 5,
+            "address_id": 1,
+            "storage_location": "Aisle 16, Shelf 11",
+            "price": 600.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 17,
+        "fields": {
+            "name": "LCD Screen",
+            "description": "LCD Screen",
+            "serial_number": "230498203",
+            "stock": 2,
+            "quantity": 2,
+            "item_type_id": 5,
+            "address_id": 1,
+            "storage_location": "Aisle 4, Shelf 6",
+            "price": 670.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 18,
+        "fields": {
+            "name": "V Belt",
+            "description": "V Belt",
+            "serial_number": "2398479834",
+            "stock": 7,
+            "quantity": 4,
+            "item_type_id": 5,
+            "address_id": 1,
+            "storage_location": "Aisle 8, Shelf 2",
+            "price": 60.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 19,
+        "fields": {
+            "name": "Backup Camera",
+            "description": "Backup Camera",
+            "serial_number": "23049820",
+            "stock": 2,
+            "quantity": 2,
+            "item_type_id": 5,
+            "address_id": 1,
+            "storage_location": "Aisle 5, Shelf 3",
+            "price": 430.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 20,
+        "fields": {
+            "name": "5\" Bit Retainer Ring",
+            "description": "5\" Bit Retainer Ring",
+            "serial_number": "478763248",
+            "stock": 4,
+            "quantity": 0,
+            "item_type_id": 3,
+            "address_id": 1,
+            "storage_location": "Aisle 15, Shelf 3",
+            "price": 30.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 21,
+        "fields": {
+            "name": "5\" Hammer Rebuild Kit",
+            "description": "5\" Hammer Rebuild Kit",
+            "serial_number": "2349876533",
+            "stock": 2,
+            "quantity": 2,
+            "item_type_id": 3,
+            "address_id": 1,
+            "storage_location": "Aisle 14, Shelf 8",
+            "price": 3000.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 22,
+        "fields": {
+            "name": "5\" Feed Tube",
+            "description": "5\" Feed Tube",
+            "serial_number": "47484404726",
+            "stock": 6,
+            "quantity": 6,
+            "item_type_id": 3,
+            "address_id": 1,
+            "storage_location": "Aisle 14, Shelf 1",
+            "price": 150.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 23,
+        "fields": {
+            "name": "Wrench Set",
+            "description": "Wrench Set",
+            "serial_number": "769832497",
+            "stock": 4,
+            "quantity": 1,
+            "item_type_id": 7,
+            "address_id": 1,
+            "storage_location": "Aisle 2, Shelf 16",
+            "price": 200.00
+        }
+    },
+    {
+        "model": "supplymateapi.item",
+        "pk": 24,
+        "fields": {
+            "name": "10' Pull Cable",
+            "description": "10' Pull Cable",
+            "serial_number": "8987234698",
+            "stock": 3,
+            "quantity": 3,
+            "item_type_id": 5,
+            "address_id": 1,
+            "storage_location": "Aisle 9, Shelf 2",
+            "price": 600.00
+        }
+    }  
 ]

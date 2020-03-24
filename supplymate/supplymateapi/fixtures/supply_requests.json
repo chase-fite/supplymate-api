@@ -8,5 +8,15 @@
             "delivery_date_time": "2020-03-20 16:00:00",
             "status_id": 2
         }
+    },
+    {
+        "model": "supplymateapi.supplyrequest",
+        "pk": 2,
+        "fields": {
+            "employee_id": 6,
+            "address_id": 1,
+            "delivery_date_time": "2020-03-24 16:00:00",
+            "status_id": 2
+        }
     }
 ]
