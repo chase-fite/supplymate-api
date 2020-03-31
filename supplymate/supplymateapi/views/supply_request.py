@@ -62,6 +62,15 @@ class SupplyRequests(ViewSet):
                 
             except SupplyRequest.DoesNotExist:
                 pass
+            
+        elif(status == 'pending'):
+            try:
+                supply_requests = SupplyRequest.objects.filter(status__name=('Pending' or 'Approved'))
+                serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
+                return Response(serializer.data)    
+                
+            except SupplyRequest.DoesNotExist:
+                pass
 
         else:
             try:

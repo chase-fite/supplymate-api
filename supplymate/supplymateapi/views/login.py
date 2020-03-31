@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 from django.views.decorators.csrf import csrf_exempt
+from supplymateapi.models import Employee
 
 @csrf_exempt
 def login_user(request):
@@ -25,7 +26,8 @@ def login_user(request):
         # If authentication was successful, respond with their token
         if authenticated_user is not None:
             token = Token.objects.get(user=authenticated_user)
-            data = json.dumps({"valid": True, "token": token.key, "id": authenticated_user.id, "first_name": authenticated_user.first_name, "last_name": authenticated_user.last_name})
+            employee = Employee.objects.get(user_id=authenticated_user.id)
+            data = json.dumps({"valid": True, "token": token.key, "id": authenticated_user.id, "first_name": authenticated_user.first_name, "last_name": authenticated_user.last_name, "employee_id": employee.id, "role": employee.role.name})
             return HttpResponse(data, content_type='application/json')
 
         else:

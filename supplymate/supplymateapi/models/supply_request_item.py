@@ -2,7 +2,7 @@ from django.db import models
 
 class SupplyRequestItem(models.Model):
 
-    supply_request = models.ForeignKey("SupplyRequest", on_delete=models.DO_NOTHING)
+    supply_request = models.ForeignKey("SupplyRequest", on_delete=models.CASCADE)
     item = models.ForeignKey("Item", on_delete=models.DO_NOTHING)
     requested_quantity = models.IntegerField(default=0)
 
