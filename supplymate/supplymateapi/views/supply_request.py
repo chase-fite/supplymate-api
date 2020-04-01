@@ -56,28 +56,46 @@ class SupplyRequests(ViewSet):
         status = self.request.query_params.get('status', None)
         if(status == 'pending'):
             try:
-                supply_requests = SupplyRequest.objects.filter(status__name=('Pending' or 'Approved'))
-                serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
-                return Response(serializer.data)    
-                
-            except SupplyRequest.DoesNotExist:
-                pass
-            
-        elif(status == 'pending'):
-            try:
-                supply_requests = SupplyRequest.objects.filter(status__name=('Pending' or 'Approved'))
-                serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
-                return Response(serializer.data)    
-                
+                role = request.auth.user.employee.role.name
+                if(role == "Remote"):
+                    supply_requests = SupplyRequest.objects.filter(status__name='Pending', employee__id=request.auth.user.employee.id)
+                    serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
+                    return Response(serializer.data)    
+                else: 
+                    supply_requests = SupplyRequest.objects.filter(status__name='Pending')
+                    serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
+                    return Response(serializer.data)
+
             except SupplyRequest.DoesNotExist:
                 pass
 
-        else:
+        elif(status == 'approved'):
             try:
-                supply_requests = SupplyRequest.objects.filter(status__name='Complete')
-                serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
-                return Response(serializer.data)    
-                
+                role = request.auth.user.employee.role.name
+                if(role == "Remote"):
+                    supply_requests = SupplyRequest.objects.filter(status__name='Approved', employee__id=request.auth.user.employee.id)
+                    serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
+                    return Response(serializer.data)    
+                else: 
+                    supply_requests = SupplyRequest.objects.filter(status__name='Approved')
+                    serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
+                    return Response(serializer.data)
+
+            except SupplyRequest.DoesNotExist:
+                pass
+        
+        elif(status == 'complete'):
+            try:
+                role = request.auth.user.employee.role.name
+                if(role == "Remote"):
+                    supply_requests = SupplyRequest.objects.filter(status__name='Complete', employee__id=request.auth.user.employee.id)
+                    serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
+                    return Response(serializer.data)    
+                else: 
+                    supply_requests = SupplyRequest.objects.filter(status__name='Complete')
+                    serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
+                    return Response(serializer.data)
+
             except SupplyRequest.DoesNotExist:
                 pass
 
@@ -103,7 +121,6 @@ class SupplyRequests(ViewSet):
             Response -- Empty body with 204 status code
         """
         supply_request = SupplyRequest.objects.get(pk=pk)
-        supply_request = SupplyRequest()
         supply_request.employee_id = request.data["employee_id"]
         supply_request.address_id = request.data["address_id"]
         supply_request.delivery_date_time = request.data["delivery_date_time"]
