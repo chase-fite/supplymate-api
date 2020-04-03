@@ -58,11 +58,11 @@ class SupplyRequests(ViewSet):
             try:
                 role = request.auth.user.employee.role.name
                 if(role == "Remote"):
-                    supply_requests = SupplyRequest.objects.filter(status__name='Pending', employee__id=request.auth.user.employee.id)
+                    supply_requests = SupplyRequest.objects.filter(status__name='Pending', employee__id=request.auth.user.employee.id).order_by('-delivery_date_time')
                     serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
                     return Response(serializer.data)    
                 else: 
-                    supply_requests = SupplyRequest.objects.filter(status__name='Pending')
+                    supply_requests = SupplyRequest.objects.filter(status__name='Pending').order_by('-delivery_date_time')
                     serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
                     return Response(serializer.data)
 
@@ -73,11 +73,11 @@ class SupplyRequests(ViewSet):
             try:
                 role = request.auth.user.employee.role.name
                 if(role == "Remote"):
-                    supply_requests = SupplyRequest.objects.filter(status__name='Approved', employee__id=request.auth.user.employee.id)
+                    supply_requests = SupplyRequest.objects.filter(status__name='Approved', employee__id=request.auth.user.employee.id).order_by('-delivery_date_time')
                     serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
                     return Response(serializer.data)    
                 else: 
-                    supply_requests = SupplyRequest.objects.filter(status__name='Approved')
+                    supply_requests = SupplyRequest.objects.filter(status__name='Approved').order_by('-delivery_date_time')
                     serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
                     return Response(serializer.data)
 
@@ -88,11 +88,11 @@ class SupplyRequests(ViewSet):
             try:
                 role = request.auth.user.employee.role.name
                 if(role == "Remote"):
-                    supply_requests = SupplyRequest.objects.filter(status__name='Complete', employee__id=request.auth.user.employee.id)
+                    supply_requests = SupplyRequest.objects.filter(status__name='Complete', employee__id=request.auth.user.employee.id).order_by('-delivery_date_time')
                     serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
                     return Response(serializer.data)    
                 else: 
-                    supply_requests = SupplyRequest.objects.filter(status__name='Complete')
+                    supply_requests = SupplyRequest.objects.filter(status__name='Complete').order_by('-delivery_date_time')
                     serializer = SupplyRequestSerializer(supply_requests, many=True, context={'request': request})
                     return Response(serializer.data)
 
