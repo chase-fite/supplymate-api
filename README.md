@@ -23,13 +23,18 @@
   * `python manage.py makemigrations`
   * `python manage.py migrate`
 
-* Fire up your dev server and get to work!
+* Load fixtures:
+
+  * `python manage.py loaddata roles.json`
+  * `python manage.py loaddata statuses.json`
+
+* Start up your dev server and get to work!
 
   * `python manage.py runserver`
 
 ## Client
 
-Please also clone down the front-end part of this app and follow the instructions for setting up react for the full experience of this app.
+Please also clone down the front-end repository of this app and follow the instructions for setting up react for the full experience of this app.
 
 https://github.com/chase-fite/supplymate-client
 
