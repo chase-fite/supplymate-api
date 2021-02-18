@@ -1,42 +1,24 @@
 # SupplyMate API
 
-## Steps to get This project started:
+SupplyMate is an inventory and logistics management system. It was designed as a tool for companies that maintain an inventory and also have employees pulling from that inventory. No more emails, phone calls, text messages, spreadsheets. SupplyMate streamlines the whole process.
 
-* Clone down the repo and `cd` into it
+## Setup
 
-* Create your OSX virtual environment in Terminal:
+- This is assuming you have python installed, and you're using a terminal with Bash.
+- From your terminal clone this repository into your directory of choice and `cd` into it.
+- Run `python -m venv env`. This will create a virtual environment so the project can run the correct dependencies.
+- If you're on a Mac run `source env/bin/activate`. If you're on windows run `source env/Scripts/activate`.
+- Run `pip install -r requirements.txt` to install all dependencies.
+- Run `python manage.py makemigrations` and `python manage.py migrate` to setup the database.
+- Run `python manage.py loaddata roles.json` and `python manage.py loaddata statuses.json` to add initial data to the database.
+- Lastly to start the api run `python manage.py runserver`.
+- If you have not done so yet, be sure to setup the front-end for this app as well. https://github.com/chase-fite/supplymate-client
 
-  * `python -m venv supplymateEnv`
-  * `source ./supplymateEnv/bin/activate`
+## Usage
 
-* Or create your Windows virtual environment in Command Line:
-
-  * `python -m venv supplymateEnv`
-  * `source ./supplymateEnv/Scripts/activate`
-
-* Install the app's dependencies:
-
-  * `pip install -r requirements.txt`
-
-* Build your database from the existing models:
-
-  * `python manage.py makemigrations`
-  * `python manage.py migrate`
-
-* Load fixtures:
-
-  * `python manage.py loaddata roles.json`
-  * `python manage.py loaddata statuses.json`
-
-* Start up your dev server and get to work!
-
-  * `python manage.py runserver`
-
-## Client
-
-Please also clone down the front-end repository of this app and follow the instructions for setting up react for the full experience of this app.
-
-https://github.com/chase-fite/supplymate-client
+- A user can register as either a logistics or remote employee.
+- Logistics employees manage the inventory and supply requests. They can add, remove, or update items. They can also approve, cancel, or modify supply requests.
+- Remote employees can create supply requests, selecting items and quantities directly from the inventory. They can also approve or cancel modified supply requests.
 
 ## ERD
 
