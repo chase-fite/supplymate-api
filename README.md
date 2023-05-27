@@ -1,4 +1,4 @@
-# SupplyMate API
+# SupplyMate API (Nashville Software School final project)
 
 SupplyMate is an inventory and logistics management system. It was designed as a tool for companies that maintain an inventory and also have employees pulling from that inventory. No more emails, phone calls, text messages, spreadsheets. SupplyMate streamlines the whole process.
 
